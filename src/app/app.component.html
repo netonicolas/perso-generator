@@ -1,20 +1,127 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<button (click)="generate()" class='pulse' >Generate</button>
+
+<!--
+<div class='pricepale-div' *ngIf="affiche">
+	<div class='nom' *ngIf="perso.getNom()"> Nom: {{perso.getNom()}} </div>
+	<div class='prenom' *ngIf="perso.getPrenom()">Prenom: {{perso.getPrenom()}}</div>
+	<div class='age' *ngIf="perso.getAge()">age: {{perso.getAge()}}</div>
+	<div class='race' *ngIf="perso.getRace()">race: {{perso.getRace()}}</div>
+	<div class='classe' *ngIf="perso.getClasse()">classe: {{perso.getClasse()}}</div>
+	<div class='niveau' *ngIf="perso.getNiveau()">level: {{perso.getNiveau()}}</div>
+	<div class='genre' *ngIf="perso.getGenre()"> gender: {{perso.getGenre()}}</div>
+	<div class='vitesse' *ngIf="perso.getVitesse()">speed: {{perso.getVitesse()}}</div>
+	<div class='langues'>
+	<div>Langues: </div>
+	<span ><div class='langue' *ngFor="let langue of perso.getLangue()">{{langue.name}}</div></span>
+	</div>
+	<div class='argent'>Argent : {{perso.getPC()}}PC {{perso.getPA()}}PA {{perso.getPo()}}PO {{perso.getPP()}}PP</div>
+	<div class='arme' *ngIf="perso.getWeapon()">{{perso.getWeapon()}}</div>
+	<div class='armor' *ngIf="perso.getArmor()">{{perso.getArmor()}}</div>
+	<div class='force' *ngIf="perso.getForce()">force {{perso.getForce()}}</div>
+	<div class='dex' *ngIf="perso.getConst()">dex {{perso.getConst()}}</div>
+	<div class='const' *ngIf="perso.getConst()">const {{perso.getConst()}}</div>
+	<div class='sag' *ngIf="perso.getSag()">sag {{perso.getSag()}}</div>
+	<div class='int' *ngIf="perso.getInt()">int {{perso.getInt()}}</div>
+	<div class='cha' *ngIf="perso.getCha()"> cha {{perso.getCha()}}</div>
+	<div  class='ca' *ngIf="perso.getCa()">ca {{perso.getCa()}}</div>
+	<div class='pv' *ngIf="perso.getPv()">pv {{perso.getPv()}}</div>
+</div>
+  -->
+  
+  
+  
+<div *ngIf="load==true">
+<div class="loader loader--style1" title="0" >
+  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+  <path opacity="0.2" fill="#FFF" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+    s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+    c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+  <path fill="#FFF" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+    C22.32,8.481,24.301,9.057,26.013,10.047z">
+    <animateTransform attributeType="xml"
+      attributeName="transform"
+      type="rotate"
+      from="0 20 20"
+      to="360 20 20"
+      dur="0.5s"
+      repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+</div>
+<section class="container" *ngIf="affiche">
+		    <article class="half">
+			        <h1 *ngIf="perso.getNom()">{{perso.getNom()}} {{perso.getPrenom()}}</h1>
+				 		<h2 contenteditable="true">{{perso.getRace()}} {{perso.getClasse()}}  Level {{perso.getNiveau()}}</h2>
+				 		<div class="detail" style="text-align:center"> <span *ngFor="let langue of perso.getLangue()">{{langue.name}} </span></div>
+			        <div class="content">
+				            <div class="main-cont cont">
+									 <form action="#" method="post" enctype="multipart/form-data">
+										 <div class="stats">
+											 <div class='div-caract'>
+											  <label for="hitpoints">Hitpoints</label>
+											  <span type="number" id="hitpoints" class="inpt number" value="18">{{perso.getPv()}}</span>
+											 </div>
+											 	 <div>
+												 <label for="armor">Armor Class</label>
+												 <span type="number" name="armor" id="armor" class="inpt number" required="required" placeholder="0" value="15">{{perso.getCa()}}</span>
+											 </div>
+											 <div>
+											 	<label for="speed">Speed</label>
+										  		<span type="number" name="speed" id="speed" class="inpt number" required="required" placeholder="0" value="30">{{perso.getVitesse()}}</span>
+											 </div>
+										 </div>		 
+                     <div>										
+										 </div>
+										 <hr>
+										  <div class="stats abilities">
+											 <div>
+											  <label for="str">STR</label>
+											  <div id="str" class="stat" contenteditable="true">{{perso.getForce()}}</div>
+											 </div>
+											 	 <div>
+												 <label for="dex">DEX</label>
+												 <div id="dex" class="stat" contenteditable="true">{{perso.getDex()}}</div>
+											 </div>
+											 <div>
+											 	<label for="con">CON</label>
+										  		<div id="con" class="stat" contenteditable="true">{{perso.getConst()}}</div>
+											 </div>
+										 </div>
+										 <div class="stats abilities">
+											 	 <div>
+											 	<label for="int">INT</label>
+										  		<div id="int" class="stat" contenteditable="true">{{perso.getInt()}}</div>
+											 </div>
+											 <div>
+											 	<label for="wis">WIS</label>
+										  		<div id="wis" class="stat" contenteditable="true">{{perso.getSag()}}</div>
+											 </div>
+											 <div>
+											 	<label for="cha">CHA</label>
+										  		<div id="cha" class="stat" contenteditable="true">{{perso.getCha()}}</div>
+											 </div>
+										 </div>
+										 <hr>
+										 
+										 <div class="profs">
+											 <h3>Equipement:</h3>
+											 
+											 <ul>
+												 <li><span class="bold">Armor</span> <span contenteditable="true">{{perso.getArmor().name}}</span></li>
+												 <li><span class="bold">Weapons</span> <span contenteditable="true">{{perso.getWeapon().name}}</span></li>
+											 </ul>
+										 </div>
+<!--
+									  <div class="submit-wrap">
+										  <input type="submit" value="Save" class="submit">
+									  </div>
+-->
+								  </form>									
+    				        </div>						      				       
+			        </div>
+		    </article>
+		    <div class="half bg" [ngStyle]="{'background-image': 'url(' + url_perso + ')'}"></div>
+	</section>
